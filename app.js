@@ -31,3 +31,33 @@ tailwind.config = {
             mobileNav.className = 'block'
         }
     }
+    let bloc = false
+    function showblock(link) {
+        const showblock1 = document.querySelector('#show-block1')
+        const showblock2 = document.querySelector('#show-block2')
+        const showblock3 = document.querySelector('#show-block3')
+        const hideblock1 = document.querySelector('#hide-block1')
+        if(hideblock1.classList.contains('hide-block')) {
+            hideblock1.classList.remove('hide-block')
+            hideblock1.classList.add('show-block')
+            showblock1.classList.remove('show-block')
+            showblock1.classList.add('hide-block')
+            showblock2.classList.remove('show-block')
+            showblock2.classList.add('hide-block')
+            showblock3.classList.remove('show-block')
+            showblock3.classList.add('hide-block')
+        }
+        else{
+            hideblock1.classList.remove('show-block')
+            hideblock1.classList.add('hide-block')
+            showblock1.classList.remove('hide-block')
+            showblock1.classList.add('show-block')
+            showblock2.classList.remove('hide-block')
+            showblock2.classList.add('show-block')
+            showblock3.classList.remove('hide-block')
+            showblock3.classList.add('show-block')
+
+        }
+        if(link)
+            lenis.scrollTo(link)
+    }
